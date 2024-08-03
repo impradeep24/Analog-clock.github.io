@@ -1,0 +1,105 @@
+*
+{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+body{
+   
+    background-color: #0e0d0d;
+}
+.container{
+    height:400px;
+    width:400px;
+    border:3px solid black;
+    position: absolute;
+    background-color: rgb(247, 242, 242);
+    transform: translate(-50%,-50%);
+    left:50%;
+    top:50%;
+    border-radius: 50%;
+    box-shadow: 5px 5px 30px #272725,
+                -5px -5px 30px #9b9b95;
+
+
+}
+.clock{
+    height:325px;
+    width:325px;
+    border:3px solid black;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left:50%;
+    top:50%;
+    border-radius: 50%;
+    background-color: #095f4c;
+    background-image: url("img/Daco_552952.png" );
+    background-size:cover;
+    box-shadow:inset 
+    -15px -15px 30px hsl(180, 88%, 17%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.hr
+{
+   width:150px;
+   height:150px; 
+}
+.min
+{
+   width:200px;
+   height:200px; 
+}
+.sec
+{
+   width:250px;
+   height:250px; 
+}
+.hr,.min,.sec{
+    /*border:2px solid black;*/
+    display: flex;
+    position: absolute;
+    justify-content: center;
+}
+.clock::before
+{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    border-radius: 50%;
+    border:2px solid white
+   
+}
+.hr::before
+{
+    position:absolute;
+    content: '';
+    width:7px;
+    height:75px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 10;
+}
+.min::before
+{
+    position:absolute;
+    content: '';
+    width:5px;
+    height:125px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 12;
+}
+.sec::before
+{
+    position:absolute;
+    content: '';
+    width:3px;
+    height:150px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 11;
+}
